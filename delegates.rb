@@ -132,7 +132,7 @@ class CustomDelegate
   # @return [String] Source name.
   #
   def source(options = {})
-    "FilesystemSource"
+    "S3Source"
   end
 
   ##
@@ -155,10 +155,6 @@ class CustomDelegate
   #                      given identifier, or nil if not found.
   #
   def filesystemsource_pathname(options = {})
-    identifier = context['identifier']
-    digest = Digest::SHA256.hexdigest(identifier)[1..10]
-    digest_path_structure = *["/Users/eric/copy-test", digest.scan(/../) ,digest, identifier]
-    digest_path_structure.join('/')
   end
 
   ##
@@ -222,6 +218,15 @@ class CustomDelegate
   #                                   or nil if not found.
   #
   def s3source_object_info(options = {})
+    identifier = context['identifier']
+    prefix = identifier[-2..-1]
+    digest_path_structure = *["ptiffs", prefix, identifier.scan(/../) , identifier]
+    
+    bucket = 'yale-image-samples'
+    info = Hash.new()
+    info['bucket'] = bucket
+    info['key'] = digest_path_structure.join('/') + '.tif'
+    info
   end
 
   ##
