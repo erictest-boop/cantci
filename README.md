@@ -19,7 +19,20 @@ Set both `AWS_ACCESS_KEY_ID` and `AWS_SECRET_KEY` environment variables.
 
 ```
 S3CACHE_BUCKET_NAME=my-cache-bucket
+S3_SOURCE_BUCKET_NAME=my-source-bucket
 ```
+
+# Image ID and lookup
+
+## Pairtree
+
+Identifiers are assumed to be numeric OIDs.  Last 2 digits are placed first for randomness.  If the OID is made up of an odd number of digits, the final digit is ignored when constructing the pairtree path.  
+
+For example, OID `12345` results in `/45/12/34/12345.tif`
+
+## Image type
+
+Assumes images are TIFF and end with the `.tif` extension.
 
 # License
 
