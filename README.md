@@ -1,5 +1,5 @@
 
-# 🍈 Cantaloupe - Dokcer image build
+# 🍈 Cantaloupe - Docker image build
 
 *High-performance dynamic image server in Java*
 
