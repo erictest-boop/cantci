@@ -222,7 +222,8 @@ class CustomDelegate
     prefix = identifier[-2..-1]
     digest_path_structure = *["ptiffs", prefix, identifier.scan(/../) , identifier]
     
-    bucket = 'yale-image-samples'
+    puts "----------------------------------------------------"
+    bucket = puts ENV['S3_SOURCE_BUCKET_NAME']
     info = Hash.new()
     info['bucket'] = bucket
     info['key'] = digest_path_structure.join('/') + '.tif'
