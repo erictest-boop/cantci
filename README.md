@@ -19,9 +19,7 @@ docker image build -t registryaccount/name:tag .
 
 Set both `AWS_ACCESS_KEY_ID` and `AWS_SECRET_KEY` environment variables.
 
-## Other
-
-Some of these are no longer needed.
+## Other variables
 
 ```
 S3CACHE_BUCKET_NAME=my-cache-bucket
