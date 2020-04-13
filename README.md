@@ -3,10 +3,6 @@
 
 *High-performance dynamic image server in Java*
 
-# TODO
-* Get source bucket name from ENV
-* Remove any unneeded environment variables
-
 # Build an image
 
 ```
