@@ -1,7 +1,11 @@
 
 # 🍈 Cantaloupe - Docker image build
 
-*High-performance dynamic image server in Java*
+Docker build for Cantaloupe IIIF image server.
+
+Sample URL:
+
+`http://127.0.0.1:8182/iiif/2/1014333/full/512,/0/default.jpg`
 
 # Build an image
 
