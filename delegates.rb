@@ -132,7 +132,7 @@ class CustomDelegate
   # @return [String] Source name.
   #
   def source(options = {})
-    "S3Source"
+   "FilesystemSource"
   end
 
   ##

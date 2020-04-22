@@ -17,8 +17,8 @@ RUN adduser --system cantaloupe
 
 # Get and unpack Cantaloupe release archive
 COPY cantaloupe-$CANTALOUPE_VERSION.war /cantaloupe/cantaloupe-$CANTALOUPE_VERSION.war 
-COPY delegates.rb cantaloupe
-COPY cantaloupe.properties cantaloupe
+COPY delegates.rb /cantaloupe/
+COPY cantaloupe.properties /cantaloupe/
 
 RUN mkdir -p /var/log/cantaloupe /var/cache/cantaloupe \
     && chown -R cantaloupe /cantaloupe /var/log/cantaloupe /var/cache/cantaloupe 
